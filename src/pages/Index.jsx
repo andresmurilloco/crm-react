@@ -40,12 +40,32 @@ export function loader(){
 }
 import React from 'react'
 import { useLoaderData } from 'react-router-dom';
+import Cliente from '../components/Cliente';
 
-const Index = () => {
+function Index (){
   const clientes = useLoaderData();
   return (
     <div>
-        <h1>Index desde pages</h1>
+        <h1 className='font-black text-4xl text-blue-900'>Clientes</h1>
+        <p className='mt-3'>Administra tus clientes</p>
+
+        {clientes.length ? 
+          <table className='w-full bg-white shadow mt-5 table-auto'>
+            <thead className='bg-blue-800 text-white'>
+              <tr>
+                <th className='p-2'>Nombre</th>
+                <th className='p-2'>Contacto</th>
+                <th className='p-2'>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              {clientes.map(cliente =>(
+                <Cliente cliente={cliente} key={cliente.id}/>
+              ))}
+            </tbody>
+          </table>
+        : 'No hay datos para mostrar'}
+
     </div>
   )
 }
