@@ -1,17 +1,17 @@
-import React from 'react'
-import { useNavigate, Form, useActionData } from 'react-router-dom'
+import { useNavigate, Form, useActionData } from 'react-router-dom';
 import Formulario from '../components/Formulario';
-import Error from '../components/Error'
+import Error from '../components/Error';
 
+//Controla los errores en el formulario
 export async function action({request}){
   const formData = await request.formData();
-
   const datos = Object.fromEntries(formData);
-
-  const errores =[];
+  const errores = [];
+  //Valida si el form está vacío
   if(Object.values(datos).includes('')){
     errores.push('Todos los campos son obligatorios')
   }
+  //Retorna el error.
   if(Object.keys(errores).length){
     return errores;
   }
