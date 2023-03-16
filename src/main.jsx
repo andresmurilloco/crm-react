@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 import {createBrowserRouter , RouterProvider} from 'react-router-dom'
 import { action as nuevoClienteAction } from './pages/NuevoCliente'
+import ErrorPage from './components/ErrorPage'
+import EditarCliente, {loader as editarLoader, action as actionEditar} from './pages/EditarCliente'
 
 //Components
 import Layout from './components/Layout'
@@ -17,11 +19,20 @@ const router = createBrowserRouter([{
         index: true,
         element: <Index/>,
         loader: clientesLoader,
+        errorElement:<ErrorPage/>
       },{
       path: '/clientes/nuevo',
       element: <NuevoCliente></NuevoCliente>,
       action: nuevoClienteAction,
-    }] 
+      errorElement:<ErrorPage/>
+      },{
+        path: '/clientes/:clienteId/editar',
+        element: <EditarCliente/>,
+        loader: editarLoader,
+        action: actionEditar,
+        errorElement:<ErrorPage/>
+      }
+    ] 
   }
 ])
 
