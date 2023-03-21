@@ -1,14 +1,6 @@
 {
   "clientes": [
     {
-      "nombre": "Juan",
-      "empresa": "Codigo Con Juan",
-      "email": "juan@juan.com",
-      "telefono": "102013313",
-      "notas": "Test",
-      "id": 1
-    },
-    {
       "id": 2,
       "nombre": "Karen",
       "telefono": 138198313,
@@ -23,26 +15,20 @@
       "empresa": "Codigo Con Juan"
     },
     {
-      "id": 4,
-      "nombre": "Miguel",
-      "telefono": 319381983,
-      "email": "miguel@juan.com",
-      "empresa": "Codigo Con Juan"
-    },
-    {
-      "id": 5,
-      "nombre": "Pedro",
-      "telefono": 1398198938,
-      "email": "pedro@juan.com",
-      "empresa": "Codigo Con Juan"
-    },
-    {
       "nombre": "Andrés Murillo ",
       "empresa": "TaskUS",
       "email": "andresmurillocortazar@outlook.com",
       "telefono": "+573176755861",
       "notas": "Test",
       "id": 6
+    },
+    {
+      "nombre": "Andrés Murillo Cortázar",
+      "empresa": "Universidad Icesi",
+      "email": "andresmurillocortazar@outlook.com",
+      "telefono": "+573176755861",
+      "notas": "esxdctfvghunjimko",
+      "id": 7
     }
   ]
 }
